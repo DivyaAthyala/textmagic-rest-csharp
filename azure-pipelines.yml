@@ -47,7 +47,7 @@ steps:
 
 - task: AzureImageBuilderTask@1
   inputs:
-    managedIdentity: 'myVMSSIdentity'
+    managedIdentity: '/subscriptions/811c6604-f6fb-46f9-a016-66bd96c6a0cd/resourcegroups/myVMSSResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myVMSSIdentity'
     customImageResourceId: '/subscriptions/811c6604-f6fb-46f9-a016-66bd96c6a0cd/resourceGroups/myVMSSResourceGroup/providers/Microsoft.Compute/galleries/myVMSSGallery/images/MyImage'
     packagePath: '$(System.DefaultWorkingDirectory)/pipeline-artifacts'
     inlineScript: |
